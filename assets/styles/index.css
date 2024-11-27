@@ -259,7 +259,7 @@
 }
 
 .line--section {
-   padding: 20px 0;
+   padding: 26px 0;
    border-bottom: 1px solid #e6e6e6;
 }
 
@@ -332,6 +332,11 @@
    display: block;
 }
 
+.under-menu-sublists > ul,
+.under-auth{
+   display: none;
+}
+
 /* container responsive */
 @media screen and (min-width:1424px) {
    .container {
@@ -341,7 +346,7 @@
 
 @media screen and (max-width:1423px) {
    .container {
-      width: 95%;
+      width: 93%;
    }
 }
 
@@ -392,13 +397,102 @@
 
    #navbar-menu,
    .cnn-navbar-right>.cnn-menu,
-   .cnn-search-btn {
+   .cnn-search-btn,
+   .under-menu-list,
+   .under-category-list > li > ul {
       display: none;
    }
+   /* .under-menu-sublists{
+      margin: 20px 0;
+   } */
+   .under-menu-sublists>ul,
+   .under-menu-head:hover ~ .under-menu-list,
+   .under-category-list{
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+   }
+   .under-menu-sublists>ul>li::before{
+      content: '';
+      display: none;
+   }
+   .under-menu-head:hover ~ .under-menu-list > li > a,
+   .under-menu-sublists>ul>li>a{
+      font-weight: 500;
+      font-size: 15px;
+   }
+   .under--edit,
+   .under-menu-head,
+   .under-category-option{
+      width: 100% !important;
+   }
+   .under--edit{
+      position: relative;
+      flex-direction: column;
+      row-gap: 30px;
+   }
+   .under-menu-head>.icon-chevron-down{
+      display: block;
+   }
+   .under-menu-head:hover ~ .under-menu-list{
+      display: flex;
+      width: 100%;
+      row-gap: 16px;
+   }
+   .under-menu-head:hover .icon-chevron-down::before{
+      content: '\f077';
+   }
+   .under-menu-footer{
+      flex-direction: column;
+   }
+   .under-category-list{
+      gap: 16px;
+   }
+   .under-category-link{
+      font-size: 16px;
+   }
+   /* .under-auth{
+      padding: 0 20px;
+   } */
 }
 
 @media screen and (max-width:480px) {
    .cnn-auth {
       display: none;
+   }
+   .under-auth{
+      display: block;
+   }
+   .under-auth-content{
+      padding: 0 20px;
+   }
+   .under-auth-link{
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      color: #0c0c0c;
+   }
+   .under-auth-link > .icon-user-circle {
+      font-size: 20px;
+   }
+   .under-auth-link > .under-auth-text{
+      font-weight: 600;
+      font-size: 19px;
+   }
+}
+
+/* navbar submenu responsive */
+@media screen and (max-width:1262px) {
+   .under-category-option{
+      width: 18%;
+   }
+   .under-category-list{
+      column-gap: 27px;
+   }
+}
+@media screen and (max-width:1136px) {
+   .under-category-list{
+      column-gap: 20px;
    }
 }
