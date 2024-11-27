@@ -451,6 +451,9 @@
    .under-category-link{
       font-size: 16px;
    }
+   .progress-content{
+      width: 80%;
+   }
    /* .under-auth{
       padding: 0 20px;
    } */
