@@ -10,7 +10,8 @@
    outline: none;
    font-family: cnn_sans_display,helveticaneue,Helvetica,Arial,Utkal,sans-serif;
 }
-*>img{
+*>img,
+*>video{
    width: 100%;
    height: 100%;
    object-fit: fill;

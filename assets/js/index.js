@@ -3,6 +3,7 @@ const progressBar = document.getElementById("progress");
 const listButton = document.getElementById("list-button");
 const searchButton = document.getElementById("search-button");
 const underMenu = document.getElementById("under--menu");
+const navbar = document.getElementById("navbar");
 
 // when opening the website, closing loading components
 window.onload = () => {
@@ -82,4 +83,23 @@ $(".slick").slick({
     // settings: "unslick"
     // instead of a settings object
   ],
+});
+
+// video js
+const video = document.getElementById('my-video');
+const videoSrc = "https://live-media-fly.warnermediacdn.com/cmaf/live/2028716/cnnfast-international/VIDEO_4_1064000.m3u8";
+videojs('my-video', {
+  autoplay: true,
+  muted: false,
+  loop: true,
+  controls: true,
+});
+
+// scrolling change navbar's background
+window.addEventListener("scroll",() => {
+  if(window.scrollY > 0){
+    navbar.classList.add("scroll");
+  }else{
+    navbar.classList.remove("scroll");
+  }
 });

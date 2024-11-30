@@ -11,6 +11,20 @@
    <link rel="stylesheet" href="assets/src/icons/style.css">
    <link rel="stylesheet" href="assets/styles/index.css">
    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+   <!-- Video.js base CSS -->
+   <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+
+   <!-- City -->
+   <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
+
+   <!-- Fantasy -->
+   <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet">
+
+   <!-- Forest -->
+   <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet">
+
+   <!-- Sea -->
+   <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,7 +34,7 @@
    </div>
 
    <!-- navbar components -->
-   <nav class="cnn-navbar">
+   <nav class="cnn-navbar" id="navbar">
       <div class="cnn-navbar-container container flex-between">
          <div class="cnn-navbar-left">
             <div class="cnn-bar-left">
@@ -568,15 +582,15 @@
    </nav>
 
    <!-- header components -->
-   <header class="cnn-header section">
+   <header class="cnn-header">
       <section class="cnn-header-section container">
          <div class="cnn-header-content slick">
-             <p class="cnn-header-list">
+            <p class="cnn-header-list">
                <a href="#" class="cnn-header-link">
                   <span class="cnn-live-text">Live Updates:</span>
                   Lebanon ceasefire deal
                </a>
-            </p> 
+            </p>
             <p class="cnn-header-list">
                <a href="#" class="cnn-header-link">
                   Lebanon ceasefire deal
@@ -610,6 +624,239 @@
       </section>
    </header>
 
+   <!-- main components -->
+   <main class="cnn-main">
+      <section class="cnn-main-section section-b">
+         <div class="cnn-main-content container">
+            <div class="cnn-main-news flex-between">
+               <div class="cnn-main-news-left col-8">
+                  <h1 class="cnn-news-head">
+                     <a href="#" class="cnn-news-link">
+                        Russia's attack on Ukraine a response to strikes with US-made missiles, Putin says</a>
+                  </h1>
+                  <div class="cnn-news-about">
+                     <div class="cnn-news-media">
+                        <a href="#" class="cnn-news-media-link">
+                           <figure class="cnn-news-image">
+                              <img src="assets/public/putin.jpeg" alt="putin.jpeg">
+                              <p class="cnn-news-alt span"><span class="cnn-news-alt-text">Analysis</span></p>
+                           </figure>
+                           <div class="cnn-news-image-about">
+                              <figcaption class="cnn-news-image-alt">
+                                 <p class="cnn-news-image-alt-text">Mikhail Tereshchenko/Sputnik/Reuters</p>
+                              </figcaption>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="cnn-news-more">
+                        <h4 class="cnn-news-title">
+                           <a href="#" class="cnn-news-title-link">The overnight strikes leave one million Ukrainian
+                              households without power after
+                              energy infrastructure was targeted across the country </a>
+                        </h4>
+                        <!-- <ul class="cnn-news-about-list">
+                           <li class="cnn-news-about-option">
+                              <a href="#" class="cnn-news-about-link">What the term ‘escalation’ gets wrong about
+                                 Ukraine striking Russia</a>
+                           </li>
+                        </ul> -->
+                     </div>
+                  </div>
+                  <div class="cnn-news-similar-content">
+                     <ul class="cnn-news-similar-list">
+                        <li class="cnn-news-similar-option">
+                           <a href="#" class="cnn-news-similar-link">
+                              <div class="cnn-news-similar-media">
+                                 <img src="assets/public/putin.jpeg" alt="putin.jpeg">
+                              </div>
+                              <p class="cnn-news-similar-desc"><span class="cnn-news-similar-span">Putin threatens to
+                                    strike Ukraine again with new missile
+                                    after wave of attacks on energy</span></p>
+                              <!-- <span class="cnn-news-similar-desc-time">1:35</span> -->
+                           </a>
+                        </li>
+                        <li class="cnn-news-similar-option">
+                           <a href="#" class="cnn-news-similar-link">
+                              <div class="cnn-news-similar-media">
+                                 <img src="assets/public/strike.jpg" alt="strike.jpeg">
+                              </div>
+                              <p class="cnn-news-similar-desc"><span class="cnn-news-important">Analysis:</span>
+                                 <span class="cnn-news-similar-span">What
+                                    the term ‘escalation’ gets wrong about Ukraine striking Russia</span>
+                              </p>
+                              <!-- <span class="cnn-news-similar-desc-time">1:35</span> -->
+                           </a>
+                        </li>
+                        <li class="cnn-news-similar-option">
+                           <a href="#" class="cnn-news-similar-link">
+                              <div class="cnn-news-similar-media">
+                                 <img src="assets/public/strike.jpg" alt="strike.jpeg">
+                              </div>
+                              <p class="cnn-news-similar-desc"><span class="cnn-news-important">Analysis:</span>
+                                 <span class="cnn-news-similar-span">What
+                                    the term ‘escalation’ gets wrong about Ukraine striking Russia</span>
+                              </p>
+                              <!-- <span class="cnn-news-similar-desc-time">1:35</span> -->
+                           </a>
+                        </li>
+                        <li class="cnn-news-similar-option">
+                           <a href="#" class="cnn-news-similar-link">
+                              <div class="cnn-news-similar-media">
+                                 <img src="assets/public/strike.jpg" alt="strike.jpeg">
+                              </div>
+                              <p class="cnn-news-similar-desc"><span class="cnn-news-important">Analysis:</span>
+                                 <span class="cnn-news-similar-span">What
+                                    the term ‘escalation’ gets wrong about Ukraine striking Russia</span>
+                              </p>
+                              <!-- <span class="cnn-news-similar-desc-time">1:35</span> -->
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="cnn-main-news-middle col-5">
+                  <div class="cnn-main-middle-content">
+                     <div class="cnn-news-middle-head">
+                        <a href="#" class="cnn-middle-link">
+                           <figure class="cnn-middle-link-media">
+                              <img src="assets/public/elon-musk.jpeg" alt="elon-musk.jpeg">
+                           </figure>
+                        </a>
+                        <h4 class="cnn-news-title">
+                           <a href="#" class="cnn-news-title-link">Syrian rebels enter Aleppo for first time in eight
+                              years during shock offensive</a>
+                        </h4>
+                     </div>
+                     <div class="cnn-middle-list-content">
+                        <ul class="cnn-middle-list">
+                           <li class="cnn-middle-option">
+                              <a href="#" class="cnn-middle-option-link"><span class="cnn-news-similar-span">How this is
+                                    different from 2016 </span><span class="cnn-news-important time">1:25</span></a>
+                           </li>
+                           <li class="cnn-middle-option">
+                              <a href="#" class="cnn-middle-option-link"><span class="cnn-news-similar-span">Palestinian
+                                    woman and two children crushed to death outside Gaza bakery </span></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="cnn-main-middle-content section">
+                     <div class="cnn-news-middle-head">
+                        <a href="#" class="cnn-middle-link">
+                           <figure class="cnn-middle-link-media">
+                              <video loop muted autoplay playsinline webkit-playsinline>
+                                 <source src="assets/public/110494-nuclear-fusion-loops-hp.mp4" type="video/mp4">
+                              </video>
+                           </figure>
+                        </a>
+                        <h4 class="cnn-news-title">
+                           <a href="#" class="cnn-news-title-link">A New Zealand startup takes a step toward
+                              near-limitless fusion energy with an unusual reactor</a>
+                        </h4>
+                     </div>
+                  </div>
+                  <div class="cnn-main-middle-content">
+                     <div class="cnn-news-middle-head">
+                        <a href="#" class="cnn-middle-link">
+                           <figure class="cnn-middle-link-media relative">
+                              <img
+                                 src="assets/public/2024-11-19t082601z-1629271710-rc278ba9nwe0-rtrmadp-3-ukraine-crisis-chasiv-yar.jpeg"
+                                 alt="ukraine-crisis.jpeg">
+                              <p class="cnn-news-alt span"><span class="cnn-news-alt-text small-span">Analysis</span>
+                              </p>
+                           </figure>
+                        </a>
+                        <h4 class="cnn-news-title">
+                           <a href="#" class="cnn-news-title-link">Trump’s Ukraine envoy outlines a starkly different
+                              approach to ending the war</a>
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-5">
+                  <div class="cnn-news-middle-head">
+                     <div class="cnn-middle-link">
+                        <figure class="cnn-middle-link-media live--video pointer">
+                           <video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+                              <source src="https://live-media-fly.warnermediacdn.com/cmaf/live/2028716/cnnfast-international/VIDEO_4_1064000.m3u8
+                              " type="application/x-mpegURL">
+                           </video>
+                        </figure>
+                     </div>
+                     <h4 class="cnn-news-title">
+                        <a href="#" class="cnn-news-title-link">Catch up on today’s global news</a>
+                     </h4>
+                  </div>
+                  <div class="cnn-news-middle-head">
+                     <a href="#" class="cnn-middle-link">
+                        <figure class="cnn-middle-link-media">
+                           <video loop muted autoplay playsinline webkit-playsinline>
+                              <source src="assets/public/tortoise-eating.mp4" type="video/mp4">
+                           </video>
+                        </figure>
+                     </a>
+                     <h4 class="cnn-news-title">
+                        <a href="#" class="cnn-news-title-link">A New Zealand startup takes a step toward
+                           near-limitless fusion energy with an unusual reactor</a>
+                     </h4>
+                  </div>
+                  <div class="cnn-news-similar-content">
+                     <ul class="cnn-news-similar-list">
+                        <li class="cnn-news-similar-option cnn--option-right">
+                           <a href="#" class="cnn-news-similar-link">
+                              <div class="cnn-news-similar-media">
+                                 <img src="assets/public/putin.jpeg" alt="putin.jpeg">
+                              </div>
+                              <p class="cnn-news-similar-desc"><span class="cnn-news-similar-span">Putin threatens to
+                                    strike Ukraine again with new missile
+                                    after wave of attacks on energy</span></p>
+                              <!-- <span class="cnn-news-similar-desc-time">1:35</span> -->
+                           </a>
+                        </li>
+                        <li class="cnn-news-similar-option cnn--option-right">
+                           <a href="#" class="cnn-news-similar-link">
+                              <div class="cnn-news-similar-media">
+                                 <img src="assets/public/strike.jpg" alt="strike.jpeg">
+                              </div>
+                              <p class="cnn-news-similar-desc"><span class="cnn-news-important">Analysis:</span>
+                                 <span class="cnn-news-similar-span">What
+                                    the term ‘escalation’ gets wrong about Ukraine striking Russia</span>
+                              </p>
+                              <!-- <span class="cnn-news-similar-desc-time">1:35</span> -->
+                           </a>
+                        </li>
+                        <li class="cnn-news-similar-option cnn--option-right">
+                           <a href="#" class="cnn-news-similar-link">
+                              <div class="cnn-news-similar-media">
+                                 <img src="assets/public/strike.jpg" alt="strike.jpeg">
+                              </div>
+                              <p class="cnn-news-similar-desc"><span class="cnn-news-important">Analysis:</span>
+                                 <span class="cnn-news-similar-span">What
+                                    the term ‘escalation’ gets wrong about Ukraine striking Russia</span>
+                              </p>
+                              <!-- <span class="cnn-news-similar-desc-time">1:35</span> -->
+                           </a>
+                        </li>
+                        <li class="cnn-news-similar-option cnn--option-right">
+                           <a href="#" class="cnn-news-similar-link">
+                              <div class="cnn-news-similar-media">
+                                 <img src="assets/public/strike.jpg" alt="strike.jpeg">
+                              </div>
+                              <p class="cnn-news-similar-desc"><span class="cnn-news-important">Analysis:</span>
+                                 <span class="cnn-news-similar-span">What
+                                    the term ‘escalation’ gets wrong about Ukraine striking Russia</span>
+                              </p>
+                              <!-- <span class="cnn-news-similar-desc-time">1:35</span> -->
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
 
 
 
@@ -619,6 +866,7 @@
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
    <script src="assets/js/index.js"></script>
 </body>
 
